@@ -235,6 +235,20 @@ button:hover,
     background-attachment: scroll;
 }
 
+#redesign_box {
+    background-image: url(splash/redesign.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+#gruppespil_box {
+    background-image: url(splash/gruppespil.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+
 #nativeapp_box {
     background-image: url(splash/native_app.png);
     background-size: cover;
@@ -242,12 +256,14 @@ button:hover,
     background-attachment: scroll;
 }
 
-.webprototype_box {
+#webprototype_box {
     background-image: url(splash/webprototype.png);
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
 }
+
+
 
 
 .box h1 {
@@ -280,7 +296,21 @@ button:hover,
 }
 
 .webprototype_overlay {
-    background-color: #f39c12;
+    background-color: rgba(243, 156, 18, 0.7);
+    opacity: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.redesign_overlay {
+     background-color: rgba(142, 68, 173, 0.7);
+    opacity: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.gruppespil_overlay {
+     background-color: rgba(142, 68, 173, 0.7);
     opacity: 0;
     height: 100%;
     font-family: 'Poppins', sans-serif;
@@ -289,7 +319,9 @@ button:hover,
 .stilart_overlay:hover,
 .pilotprojekt_overlay:hover,
 .nativeapp_overlay:hover,
-.webprototype_overlay:hover{
+.webprototype_overlay:hover,
+.redesign_overlay:hover,
+.gruppespil_overlay:hover{
     opacity: 1;
     transition: .3s;
     border: none;
@@ -303,7 +335,9 @@ button:hover,
 .stilart_overlay button,
 .pilotprojekt_overlay button,
 .nativeapp_overlay button,
-.webprototype_overlay button{
+.webprototype_overlay button,
+.redesign_overlay button,
+.gruppespil_overlay button{
     width: 50%;
     font-family: 'Poppins', sans-serif;
 }

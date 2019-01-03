@@ -1,0 +1,353 @@
+ @import url("http://fonts.googleapis.com/css?family=Cookie");
+
+
+html {
+
+    background-color: #FEFEFA;
+    font-size: 10px;
+}
+
+* {
+    margin: 0 auto;
+    
+}
+
+body {
+    height: 103vh;
+    width: 100vw;
+    font-size: 10px;
+}
+
+nav {
+    padding: 1vw;
+    text-align: right;
+    position: fixed;
+    z-index: 4;
+    background-color: #1E85D0;
+    width: 100%;
+    display: table;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav a {
+    font-size: 180%;
+    padding-right: 5vw;
+    text-decoration: none;
+    color: whitesmoke;
+
+}
+
+burger_nav {
+    background-color: firebrick;
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    
+}
+
+
+
+
+nav a:hover {
+    opacity: 0.5;
+    
+}
+
+.tema_valg i {
+    padding-right: 0.5vw;
+}
+
+#top {
+    display: table;
+    width: 100%;
+    height: 650px;
+    background: url(splash/group-3.svg) no-repeat 50% 50%;
+    background-size: cover;   
+}
+
+.scroll_center {
+text-align: center;
+}
+
+.scroll {
+    width: 50px;
+    animation: scrollDown;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes scrollDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    
+    100% {
+       transform: translateY(0); 
+    }
+}
+
+#top .inner {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    max-width: none;
+}
+
+.content {
+    margin: 0 auto;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 500%;
+    line-height: 30%;
+    padding-bottom: 12vw;
+}
+
+.content h1 {
+    font: 400 130px/0.8 'Cookie', Helvetica, sans-serif;
+  color: whitesmoke;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
+}
+
+.content h2 {
+    margin: 0 auto;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 50%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    
+}
+
+#about {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10vw;
+    ;
+    margin-right: 10vw;
+    ;
+
+}
+
+#about p {
+    margin-top: 10px;
+    flex-basis: 700px;
+    width: 600px;
+    font-size: 170%;
+font-family: 'poppins', sans-serif;
+}
+
+#about img {
+    flex-basis: 300px;
+    max-height: 300px;
+    border-radius: 50%;
+}
+
+about_h1 {
+    margin-top: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    background-color: #141d29;
+    padding: 1vw;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+button:hover,
+.card a:hover {
+    opacity: 0.7;
+}
+
+#projekter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 10vw;
+    margin-right: 10vw;
+      
+
+}
+
+.opacity {
+    opacity: 0;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    margin: 1vw;
+    flex-basis: 300px;
+    flex-grow: 1;
+    text-align: center;
+    color: whitesmoke;
+    box-shadow: 10px 11px 40px -9px rgba(0, 0, 0, 0.75);
+}
+
+#stilart_box {
+    background-image: url(splash/screnndump.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+#pilotprojekt_box {
+    background-image: url(splash/pilotprojekt.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+#nativeapp_box {
+    background-image: url(splash/native_app.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+.webprototype_box {
+    background-image: url(splash/webprototype.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+
+.box h1 {
+    font-size: 100%;
+}
+
+.box p {
+    font-size: 70%;
+}
+
+.stilart_overlay {
+    background-color: rgba(39, 174, 96, 0.7);
+    opacity: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pilotprojekt_overlay {
+    background-color: rgba(41, 128, 185, 0.7);
+    opacity: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nativeapp_overlay {
+    background-color: rgba(231, 76, 60, 0.7);
+    opacity: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.webprototype_overlay {
+    background-color: #f39c12;
+    opacity: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.stilart_overlay:hover,
+.pilotprojekt_overlay:hover,
+.nativeapp_overlay:hover,
+.webprototype_overlay:hover{
+    opacity: 1;
+    transition: .3s;
+    border: none;
+}
+
+.box:hover {
+    box-shadow: none;
+}
+
+
+.stilart_overlay button,
+.pilotprojekt_overlay button,
+.nativeapp_overlay button,
+.webprototype_overlay button{
+    width: 50%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.projekter_h1 {
+    margin-top: 60px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #1E85D0;
+    font-size: 500%;
+    font-family: 'Cookie', sans-serif;
+}
+
+.line_left {
+    height: 1px;
+    width: 50%;
+    background-color: #1E85D0
+}
+
+.about_h1 {
+    margin-top: 5%;
+    text-align: center;
+    color: #241131;
+    font-size: 300%;
+    font-family: 'poppins', sans-serif;
+}
+
+@media screen and (max-width: 527px) {
+    .content {
+        font-size: 400%;
+    }
+
+    @media screen and (max-width: 391px) {
+        .content {
+            font-size: 300%;
+        }
+
+        @media screen and (max-width: 350px) {
+            .content {
+                font-size: 100%;
+            }
+
+
+            footer {
+                position: absolute;
+                bottom: 0;
+            }

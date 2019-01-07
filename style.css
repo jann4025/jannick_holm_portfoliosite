@@ -20,12 +20,15 @@ INDHOLD
 
 :root {
     --main-bg-color-pilot: #1E86D0;
-     --main-bg-color-pilot-overlay: rgba(30, 134, 208, 0.7);
-     --main-bg-color-redesign: rgb(142, 68, 173);
+    --main-bg-color-pilot-overlay: rgba(30, 134, 208, 0.7);
+    --main-bg-color-redesign: rgb(142, 68, 173);
+    --main-bg-color-sexsamfund: rgba(48, 57, 82);
+    --main-bg-color-webprototype: rgba(243, 156, 18);
+    --main-bg-color-nativeapp: rgba(231, 76, 60);
 }
 
 html {
- scroll-behavior: smooth;
+    scroll-behavior: smooth;
     background-color: #FEFEFA;
     font-size: 10px;
 }
@@ -35,29 +38,79 @@ html {
 }
 
 body {
-    height: 103vh;
-    width: 100vw;
     font-size: 10px;
 }
 
 footer {
-    display: table;
+    padding-bottom: 1vw;
+    padding-top: 1vw;
     width: 100%;
-    height: 5vw;
     color: white;
     font-family: 'poppins', sans-serif;
-    text-align: center;
     font-size: 150%;
+    align-content: center;
 }
 
-footer p {
-    display: table-cell;
-    vertical-align: middle;
+
+
+
+.socials {
+    text-align: left;
+    flex-basis: auto;
 }
+
+.socials span {
+    padding: 5px;
+}
+
+.top {
+    padding-top: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.top a {
+    font-size: 100%;
+    color: whitesmoke;
+    text-align: left;
+}
+
+.links1 a:hover,
+.links2 a:hover {
+    text-decoration: underline;
+}
+
+.fab:hover,
+.p:hover {
+    transform: scale(1.2);
+    font-size: 105%;
+}
+
+.build_by {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.links1 {
+    flex-basis: auto;
+}
+
+.links2 {
+    flex-basis: auto;
+}
+
 
 button:hover,
 .card a:hover {
     opacity: 0.7;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 /******gennerelt slut********/
@@ -142,10 +195,6 @@ nav a {
 
 }
 
-nav a:hover {
-    opacity: 0.5;
-
-}
 
 .tema_valg i {
     padding-right: 0.5vw;
@@ -269,8 +318,7 @@ a {
 #projekter {
     margin-left: 10vw;
     margin-right: 10vw;
-    height: 100vh;
-    margin-bottom: 200px;
+    margin-bottom: 10vw;
 }
 
 .projekter_boxes {
@@ -297,7 +345,7 @@ a {
     background-attachment: scroll;
 }
 
-#pilotprojekt_box  {
+#pilotprojekt_box {
     background-image: url(splash/pilotprojekt.png);
     background-size: cover;
     background-position: center;
@@ -382,6 +430,20 @@ a {
     font-family: 'Poppins', sans-serif;
 }
 
+@media only screen and (max-width: 768px) {
+
+    .stilart_overlay,
+    .pilotprojekt_overlay,
+    .nativeapp_overlay,
+    .webprototype_overlay,
+    .redesign_overlay,
+    .gruppespil_overlay {
+        opacity: 1;
+        transition: 0;
+    }
+}
+
+
 .stilart_overlay:hover,
 .pilotprojekt_overlay:hover,
 .nativeapp_overlay:hover,
@@ -423,43 +485,60 @@ a {
 
 
 /*******2.4 cv*******/
-#about {
-    margin-top: 15px;
-    margin-left: 0 auto;
-    margin-right: 0 auto;
-    margin-bottom: 100px;
-    width: 65%;
+#resume {
+    display: table;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
-.about_content {
+#resume .resume_h1 {
+    text-align: center;
+    color: #1E85D0;
+    font-size: 700%;
+    font-family: 'Cookie', sans-serif;
+}
+
+#resume .sectionwrapper {
     display: flex;
     flex-wrap: wrap;
 }
 
-.resume {
-    flex-basis: 600px;
+#resume .sectionwrapper img {
+    max-width: 540px;
+    width: 100%;
+
+}
+
+#resume .sectionwrapper .left {
+    flex-basis: 300px;
     margin: auto;
-    font-size: 170%;
+    flex-grow: 1;
     font-family: 'poppins', sans-serif;
-    text-align: justify;
+    font-size: 130%;
 
 }
 
-.about_content img {
-    flex-basis: 200px;
-    max-height: 230px;
-}
-
-.about_h1 {
-    margin-top: 80px;
-    margin-bottom: 20px;
-    font: 400 130px/0.8 'Cookie', Helvetica, sans-serif;
-    color: #1E85D0;
-    text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
-    font-size: 500%;
+#resume .sectionwrapper .left .center_img {
     text-align: center;
+    margin-top: 2vw;
 
 }
+
+
+#resume .sectionwrapper .right {
+    margin-left: 5vw;
+    flex-basis: 300px;
+    flex-grow: 1;
+    font-family: 'poppins', sans-serif;
+    font-size: 130%;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 /*******2.4 cv slut*******/
 /******INDEX/HOME SLUT*********/
@@ -773,12 +852,13 @@ a {
     background-color: var(--main-bg-color-pilot);
     transition: .2s;
 }
+
 /**********Pilot projekt slut********************/
 
 
 /******************redesign**********************/
 .purpel {
-   background-color: var(--main-bg-color-redesign);
+    background-color: var(--main-bg-color-redesign);
 }
 
 .preload_redesign {
@@ -902,14 +982,14 @@ a {
     padding-left: .7vw;
     padding-right: .7vw;
     color: black;
-    margin-top: 200px;
+    margin-top: 20vw;
     border-radius: 1px;
     font-size: 180%;
     font-family: 'poppins', sans-serif;
 }
 
 .btn_redesign2 {
-    margin-left: 3vw;
+    margin-left: 1vw;
 }
 
 .btn_redesign:hover {
@@ -918,6 +998,750 @@ a {
     transition: .2s;
 }
 
+
+
+/******redesign slut*********/
+
+
+/******sex&samfund spil**********/
+
+.dark {
+    background-color: var(--main-bg-color-sexsamfund);
+}
+
+.preload_sexsamfund {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-bg-color-sexsamfund);
+    display: table;
+    text-align: center;
+    z-index: 10;
+}
+
+.preload_sexsamfund img {
+    position: absolute;
+    left: 42.5vw;
+    top: 19vw;
+    display: table-cell;
+    vertical-align: middle;
+    width: 10%;
+    animation: logoSpin 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes logoSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+#sexsamfund {
+    display: table;
+    width: 89%;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sexsamfund h1 {
+    margin-top: 120px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: var(--main-bg-color-sexsamfund);
+    font-size: 700%;
+    font-family: 'cookie', sans-serif;
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+}
+
+#sexsamfund p {
+    font-size: 150%;
+}
+
+#sexsamfund .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+#sexsamfund .left {
+    flex-basis: 600px;
+    flex-grow: 1;
+    margin-bottom: 50px;
+}
+
+#sexsamfund .left p {
+    font-family: 'poppins', sans-serif;
+    font-size: 130%;
+}
+
+#sexsamfund .left p a {
+    font-family: 'poppins', sans-serif;
+    font-size: 100%;
+    text-decoration: underline;
+
+}
+
+#sexsamfund .left p a:hover {
+    color: var(--main-bg-color-sexsamfund);
+}
+
+#sexsamfund .left h3 {
+    font-size: 200%;
+    font-family: 'poppins', sans-serif;
+}
+
+#sexsamfund .right {
+
+    flex-basis: 400px;
+    flex-grow: 1;
+    margin-left: 5vw;
+}
+
+#sexsamfund .screendump {
+    margin: auto;
+    margin-right: 5px;
+    width: 100%;
+    max-width: 250px;
+    align-self: flex-start;
+    float: left;
+}
+
+#sexsamfund .screendump2 {
+    margin: auto;
+    margin-top: 0;
+    width: 100%;
+    max-width: 230px;
+    align-self: flex-start;
+    float: left;
+}
+
+.btn_sexsamfund {
+    border: 2px solid var(--main-bg-color-sexsamfund);
+    padding: .5vw;
+    padding-left: .7vw;
+    padding-right: .7vw;
+    color: black;
+    margin-top: 200px;
+    border-radius: 1px;
+    font-size: 180%;
+    font-family: 'poppins', sans-serif;
+}
+
+.btn_sexsamfund2 {
+    margin-left: 1vw;
+}
+
+.btn_sexsamfund:hover {
+    color: whitesmoke;
+    background-color: var(--main-bg-color-sexsamfund);
+    transition: .2s;
+}
+
+/**********sex & samfund slut************/
+
+.orange {
+    background-color: var(--main-bg-color-webprototype);
+}
+
+.preload_webprototype {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-bg-color-webprototype);
+    display: table;
+    text-align: center;
+    z-index: 10;
+}
+
+.preload_webprototype img {
+    position: absolute;
+    left: 42.5vw;
+    top: 19vw;
+    display: table-cell;
+    vertical-align: middle;
+    width: 10%;
+    animation: logoSpin 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes logoSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+#webprototype {
+    display: table;
+    width: 89%;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#webprototype h1 {
+    margin-top: 120px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: var(--main-bg-color-webprototype);
+    font-size: 700%;
+    font-family: 'cookie', sans-serif;
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+}
+
+#webprototype p {
+    font-size: 150%;
+}
+
+#webprototype .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+#webprototype .left {
+    flex-basis: 600px;
+    flex-grow: 1;
+    margin-bottom: 50px;
+    align-content: center;
+}
+
+#webprototype .left p {
+    font-family: 'poppins', sans-serif;
+    font-size: 130%;
+}
+
+#webprototype .left p a {
+    font-family: 'poppins', sans-serif;
+    font-size: 100%;
+    text-decoration: underline;
+
+}
+
+#webprototype .left p a:hover {
+    color: var(--main-bg-color-webprototype);
+}
+
+#webprototype .left h3 {
+    font-size: 200%;
+    font-family: 'poppins', sans-serif;
+}
+
+#webprototype .right {
+    flex-basis: 400px;
+    flex-grow: 1;
+    margin-left: 5vw;
+}
+
+#webprototype .screendump {
+    margin: auto;
+    margin-right: 5px;
+    width: 100%;
+    max-width: 350px;
+    align-self: flex-start;
+    float: left;
+}
+
+
+.btn_webprototype {
+    border: 2px solid var(--main-bg-color-webprototype);
+    padding: .5vw;
+    padding-left: .7vw;
+    padding-right: .7vw;
+    color: black;
+    margin-top: 200px;
+    border-radius: 1px;
+    font-size: 180%;
+    font-family: 'poppins', sans-serif;
+}
+
+.btn_webprototype2 {
+    margin-left: 1vw;
+}
+
+.btn_webprototype:hover {
+    color: whitesmoke;
+    background-color: var(--main-bg-color-webprototype);
+    transition: .2s;
+}
+
+/*******webprototype slut*******/
+
+
+
+
+
+.timeline {
+    position: relative;
+    margin: 50px auto;
+    padding: 40px 0;
+    width: 300px;
+
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 86%;
+    background: grey;
+}
+
+.timeline ul {
+    margin: 0;
+    padding: 0;
+}
+
+.timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.timeline ul li:nth-child(odd) {
+    float: left;
+    text-align: right;
+    clear: both;
+}
+
+.timeline ul li:nth-child(even) {
+    float: right;
+    text-align: left;
+    clear: both;
+}
+
+.timeline ul li .content {
+    padding-bottom: 20px;
+
+}
+
+.timeline ul li:nth-child(odd):before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: -6px;
+    width: 10px;
+    height: 10px;
+    background: rgba(233, 33, 99, 1);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.2);
+
+}
+
+.timeline ul li:nth-child(even):before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: -4px;
+    width: 10px;
+    height: 10px;
+    background: #1E86D0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(30, 134, 208, 0.2);
+}
+
+.timeline ul li h2 {
+    position: absolute;
+    right: 1.4vw;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: rgba(233, 33, 99, 1);
+    font-weight: 600;
+}
+
+.timeline ul li h3 {
+    position: relative;
+    right: 1.2vw;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: #1E86D0;
+    font-weight: 600;
+}
+
+
+.timeline ul li .odd {
+    text-align: right;
+    position: relative;
+    top: 1.52vw;
+    left: 1.2vw;
+    line-height: 1.4;
+    font-weight: 700;
+
+}
+
+.timeline ul li .odd1 {
+    text-align: right;
+    position: relative;
+    top: 1.52vw;
+    right: 1.3vw;
+    line-height: 1.4;
+    font-weight: 700;
+
+}
+
+.timeline ul li .odd2 {
+    text-align: right;
+    position: relative;
+    font-size: 6px;
+    top: 1.52vw;
+    right: 1.5vw;
+    line-height: 1.4;
+    font-weight: 700;
+    width: 160%;
+
+}
+
+.timeline ul li .even {
+    text-align: right;
+    position: relative;
+    top: 0.vw;
+    right: 1.2vw;
+    line-height: 1.4;
+    font-weight: 700;
+    width: 180%;
+
+}
+
+.timeline ul li .even2 {
+    text-align: right;
+    position: relative;
+    top: 0.vw;
+    right: 1.2vw;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.timeline ul li .even3 {
+    text-align: right;
+    position: relative;
+    top: 0.vw;
+    right: 4.2vw;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+
+.timeline ul li .even_h3 {
+    text-align: left;
+    position: relative;
+    right: vw;
+    width: 280%
+}
+
+.timeline ul li .even_h3_2 {
+    text-align: left;
+    position: relative;
+    right: vw;
+    width: 252%;
+    color: #1E86D0;
+}
+
+
+.timeline ul li .even_h3_3 {
+    text-align: left;
+    position: relative;
+    right: vw;
+    width: 280%
+}
+
+.timeline ul li .even_h3 {
+    text-align: right;
+    position: relative;
+    right: 3.4vw;
+}
+
+
+
+.timeline ul li .fotograf {
+    font-size: 13px;
+}
+
+.timeline ul li .content p {
+    margin 10px 0 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.timeline ul li .content .p1 {
+    color: rgba(233, 33, 99, 1);
+}
+
+.timeline ul li .content .p2 {
+    color: #1E86D0;
+}
+
+.timeline ul .time h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+.timeline ul li:nth-child(odd) .time {
+    position: absolute;
+    top: 12px;
+    right: -160px;
+    margin: 0;
+    padding: 8px 16px;
+    background: rgba(233, 33, 99, 1);
+    color: white;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.2);
+    ;
+}
+
+
+.timeline ul li:nth-child(even) .time {
+    position: absolute;
+    top: 12px;
+    left: -180px;
+    margin: 0;
+    padding: 8px 16px;
+    background: #1E86D0;
+    color: white;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(30, 134, 208, 0.2);
+}
+
+
+
+
+/*******Nativeapp*******/
+.red {
+    background-color: var(--main-bg-color-nativeapp);
+}
+
+.preload_nativeapp {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-bg-color-nativeapp);
+    display: table;
+    text-align: center;
+    z-index: 10;
+}
+
+.preload_nativeapp img {
+    position: absolute;
+    left: 42.5vw;
+    top: 19vw;
+    display: table-cell;
+    vertical-align: middle;
+    width: 10%;
+    animation: logoSpin 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes logoSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+#nativeapp {
+    display: table;
+    width: 89%;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nativeapp h1 {
+    margin-top: 120px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: var(--main-bg-color-nativeapp);
+    font-size: 700%;
+    font-family: 'cookie', sans-serif;
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+}
+
+#nativeapp p {
+    font-size: 150%;
+}
+
+#nativeapp .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+#nativeapp .left {
+    flex-basis: 600px;
+    flex-grow: 1;
+    margin-bottom: 50px;
+    align-content: center;
+}
+
+#nativeapp .left p {
+    font-family: 'poppins', sans-serif;
+    font-size: 130%;
+}
+
+#nativeapp .left p a {
+    font-family: 'poppins', sans-serif;
+    font-size: 100%;
+}
+
+
+#nativeapp .left h3 {
+    font-size: 200%;
+    font-family: 'poppins', sans-serif;
+}
+
+#nativeapp .right {
+    flex-basis: 500px;
+    flex-grow: 1;
+    margin-left: 5vw;
+}
+
+#nativeapp .screendump {
+    margin: auto;
+    margin-right: 5px;
+    width: 100%;
+    max-width: 350px;
+    align-self: flex-start;
+    float: left;
+}
+
+
+.btn_nativeapp {
+    border: 2px solid var(--main-bg-color-nativeapp);
+    padding: .5vw;
+    padding-left: .7vw;
+    padding-right: .7vw;
+    color: black;
+    margin-top: 200px;
+    border-radius: 1px;
+    font-size: 180%;
+    font-family: 'poppins', sans-serif;
+}
+
+.btn_nativeapp2 {
+    margin-left: 1vw;
+}
+
+.btn_nativeapp:hover {
+    color: whitesmoke;
+    background-color: var(--main-bg-color-nativeapp);
+    transition: .2s;
+}
+
+
+
+/*******Nativeapp slut*********/
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 425px) {
+    .timeline {
+        right: 4.5vw;
+    }
+
+    .timeline ul li h2 {
+        right: 3vw;
+    }
+
+    .timeline ul li .odd {
+        left: 5.5vw;
+        top: 5vw;
+    }
+
+    .timeline ul li .odd1 {
+        left: -3.5vw;
+        top: 5vw;
+    }
+
+    .timeline ul li .odd2 {
+        left: -3.5vw;
+        top: 5vw;
+    }
+
+    .timeline ul li .even_h3_2 {
+        right: 5vw;
+    }
+
+    .timeline ul li .even {
+        right: 5vw;
+    }
+
+    .timeline ul li .even_h3 {
+        right: 12vw;
+    }
+
+    .timeline ul li .even_h3_3 {
+        right: 5vw;
+    }
+
+    .timeline ul li .even3 {
+        right: 15.5vw;
+    }
+}
+
+
+.flex_knap {
+    display: none;
+}
+
+
+
+.ikke_flex_knap {
+    display: inline;
+}
+
+
+@media screen and (max-width: 769px) {
+    .flex_knap {
+        display: inline;
+        text-align: center;
+    }
+
+    .flex_knap {
+        padding: 1vw;
+    }
+
+    .ikke_flex_knap {
+        display: none;
+    }
+
+}
 
 
 
@@ -967,7 +1791,73 @@ a {
     }
 }
 
+@media screen and (max-width: 466px) {
+
+    .btn_webprototype,
+    .btn_stilart,
+    .btn_sexsamfund,
+    .btn_nativeapp,
+    .btn_pilot,
+    .btn_redesign,
+        {
+        font-size: 170%;
+
+    }
+
+    @media screen and (max-width: 442px) {
+
+        .btn_webprototype,
+        .btn_stilart,
+        .btn_sexsamfund,
+        .btn_nativeapp,
+        .btn_pilot,
+        .btn_redesign,
+            {
+            font-size: 160%;
+
+        }
+
+        @media screen and (max-width: 417px) {
+
+            .btn_webprototype,
+            .btn_stilart,
+            .btn_sexsamfund,
+            .btn_nativeapp,
+            .btn_pilot,
+            .btn_redesign,
+                {
+                font-size: 150%;
+
+            }
+
+            @media screen and (max-width: 393px) {
+
+                .btn_webprototype,
+                .btn_stilart,
+                .btn_sexsamfund,
+                .btn_nativeapp,
+                .btn_pilot,
+                .btn_redesign,
+                    {
+                    font-size: 140%;
+
+                }
+
+                @media screen and (max-width: 320px) {
+
+                    .btn_webprototype,
+                    .btn_stilart,
+                    .btn_sexsamfund,
+                    .btn_nativeapp,
+                    .btn_pilot,
+                    .btn_redesign,
+                        {
+                        font-size: 110%;
+
+                    }
 
 
 
-/*******@MEDIA SLUT*******/
+
+
+                    /*******@MEDIA SLUT*******/

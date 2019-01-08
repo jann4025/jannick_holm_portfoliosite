@@ -1,30 +1,15 @@
-/*
-INDHOLD
-
-1. gennerelt
-2. INDEX/HOME
-    2.0 Preload
-    2.1 Navigation
-    2.2 top
-    2.3 projekter
-    2.4 cv
-3. STILART SITE
-    3.0 Preload
-    3.1 Navigation
-    3.2 Content
-*/
-
 
 /******1. gennerelt********/
-@import url("http://fonts.googleapis.com/css?family=Cookie");
+@import url("css/style.css");
+
 
 :root {
     --main-bg-color-pilot: #1E86D0;
     --main-bg-color-pilot-overlay: rgba(30, 134, 208, 0.7);
-    --main-bg-color-redesign: rgb(142, 68, 173);
-    --main-bg-color-sexsamfund: rgba(48, 57, 82);
-    --main-bg-color-webprototype: rgba(243, 156, 18);
-    --main-bg-color-nativeapp: rgba(231, 76, 60);
+    --main-bg-color-redesign: #8e44ad;
+    --main-bg-color-sexsamfund: #303952;
+    --main-bg-color-webprototype: #f39c12;
+    --main-bg-color-nativeapp: #e74c3c;
 }
 
 html {
@@ -51,6 +36,9 @@ footer {
     align-content: center;
 }
 
+.green {
+    background-color: rgba(39, 174, 96);
+}
 
 
 
@@ -104,7 +92,7 @@ footer {
 }
 
 
-button:hover,
+.button:hover,
 .card a:hover {
     opacity: 0.7;
 }
@@ -293,7 +281,7 @@ nav a {
     font-size: 18px;
 }
 
-button {
+.button {
     border: none;
     outline: 0;
     display: inline-block;
@@ -439,7 +427,7 @@ a {
     .redesign_overlay,
     .gruppespil_overlay {
         opacity: 1;
-        transition: 0;
+        transition: .5s;
     }
 }
 
@@ -462,12 +450,12 @@ a {
 }
 
 
-.stilart_overlay button,
-.pilotprojekt_overlay button,
-.nativeapp_overlay button,
-.webprototype_overlay button,
-.redesign_overlay button,
-.gruppespil_overlay button {
+.stilart_overlay .button,
+.pilotprojekt_overlay .button,
+.nativeapp_overlay .button,
+.webprototype_overlay .button,
+.redesign_overlay .button,
+.gruppespil_overlay .button {
     width: 50%;
     font-family: 'Poppins', sans-serif;
 }
@@ -537,6 +525,7 @@ a {
     text-align: left;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 
@@ -595,9 +584,6 @@ a {
 /***3.0 preload slut***/
 
 /***3.1 navtigation***/
-.green {
-    background-color: rgba(39, 174, 96);
-}
 
 /***3.1 navtigation slut***/
 
@@ -1415,7 +1401,6 @@ a {
 .timeline ul li .even {
     text-align: right;
     position: relative;
-    top: 0.vw;
     right: 1.2vw;
     line-height: 1.4;
     font-weight: 700;
@@ -1426,7 +1411,6 @@ a {
 .timeline ul li .even2 {
     text-align: right;
     position: relative;
-    top: 0.vw;
     right: 1.2vw;
     line-height: 1.4;
     font-weight: 700;
@@ -1435,7 +1419,6 @@ a {
 .timeline ul li .even3 {
     text-align: right;
     position: relative;
-    top: 0.vw;
     right: 4.2vw;
     line-height: 1.4;
     font-weight: 700;
@@ -1445,14 +1428,12 @@ a {
 .timeline ul li .even_h3 {
     text-align: left;
     position: relative;
-    right: vw;
     width: 280%
 }
 
 .timeline ul li .even_h3_2 {
     text-align: left;
     position: relative;
-    right: vw;
     width: 252%;
     color: #1E86D0;
 }
@@ -1461,7 +1442,6 @@ a {
 .timeline ul li .even_h3_3 {
     text-align: left;
     position: relative;
-    right: vw;
     width: 280%
 }
 
@@ -1525,6 +1505,56 @@ a {
     border-radius: 18px;
     box-shadow: 0 0 0 3px rgba(30, 134, 208, 0.2);
 }
+
+.timeline_mobile {
+
+    display: none;
+    padding: 5vw;
+    margin-top: 5vw;
+    margin-bottom: 10vw;
+    width: 100%;
+    font-family: 'poppins', sans-serif;
+    font-size: 130%;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+
+.timeline_mobile ul {
+    list-style: none;
+    padding-top: 5vw;
+    padding: 5vw;
+}
+
+
+.timeline_mobile .skills ul li i {
+font-family: 'poppins', sans-serif;
+    font-size: 130%;
+
+}
+
+.timeline_mobile ul h1 {
+    padding-bottom: 1.5vw;
+
+}
+
+.timeline_mobile ul li {
+   padding-bottom: 5vw;
+}
+
+
+ @media screen and (max-width: 375px) {
+
+                    .timeline
+                        {
+
+display: none;
+                    }
+
+     .timeline_mobile {
+         display: block;
+     }
+                    }
 
 
 
@@ -1626,6 +1656,12 @@ a {
     margin-left: 5vw;
 }
 
+#nativeapp .right iframe {
+    width:100%;
+    height:667px;
+    border: none;
+}
+
 #nativeapp .screendump {
     margin: auto;
     margin-right: 5px;
@@ -1662,7 +1698,49 @@ a {
 
 /*******Nativeapp slut*********/
 
+/*******Færdigheder******/
 
+#skills {
+    font-family: 'poppins', sans-serif;
+   display: block;
+}
+
+
+#skills .h1_center {
+    text-align: center;
+    font-size: 300%;
+}
+
+#skills .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#skills .wrapper .row {
+    width: 100%;
+    max-width: 400px;
+    font-size: 500%;
+    flex-basis: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2vw;
+
+}
+
+
+
+#skills .wrapper .row img {
+    max-width: 100px;
+}
+
+
+@media screen and (max-width: 425px) {
+
+    #skills {
+        display: none;
+    }
+}
 
 
 
